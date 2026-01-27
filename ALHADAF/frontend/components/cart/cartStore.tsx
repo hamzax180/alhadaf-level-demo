@@ -1,7 +1,7 @@
-'use client';
 
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { api } from '../../lib/api';
+
+// CUSTOM EVENT FOR CART UPDATES
+const CART_UPDATED_EVENT = 'cart-updated';
 
 type CartItem = {
   id: string;
@@ -21,93 +21,78 @@ type Ctx = {
 
 const CartCtx = createContext<Ctx | null>(null);
 
+function getLocalCart(): Cart {
+  if (typeof window === 'undefined') return { id: 'local', items: [] };
+  const stored = localStorage.getItem('demo_cart');
+  return stored ? JSON.parse(stored) : { id: 'local', items: [] };
+}
+
+function saveLocalCart(cart: Cart) {
+  localStorage.setItem('demo_cart', JSON.stringify(cart));
+  window.dispatchEvent(new Event(CART_UPDATED_EVENT));
+}
+
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [cartId, setCartId] = useState<string | null>(null);
   const [cart, setCart] = useState<Cart | null>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem('cartId');
-    if (saved) setCartId(saved);
+    // Initial load
+    setCart(getLocalCart());
+
+    // Listen for updates
+    const handleUpdate = () => setCart(getLocalCart());
+    window.addEventListener(CART_UPDATED_EVENT, handleUpdate);
+    return () => window.removeEventListener(CART_UPDATED_EVENT, handleUpdate);
   }, []);
 
-  useEffect(() => {
-    if (!cartId) return;
-    refresh();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cartId]);
-
-  const handleCartError = (err: any) => {
-    if (err.message?.includes('Cart not found')) {
-      console.warn('Cart not found on server, resetting local cart...');
-      localStorage.removeItem('cartId');
-      setCartId(null);
-      setCart(null);
-      return true;
-    }
-    return false;
-  };
-
-  async function ensureCart() {
-    if (cartId) return cartId;
-    try {
-      const c = await api<Cart>('/api/cart', { method: 'POST' });
-      localStorage.setItem('cartId', c.id);
-      setCartId(c.id);
-      return c.id;
-    } catch (err) {
-      console.error('Failed to create cart', err);
-      throw err;
-    }
-  }
-
   async function refresh() {
-    if (!cartId) return;
-    try {
-      const c = await api<Cart>(`/api/cart/${cartId}`);
-      setCart(c);
-    } catch (err) {
-      if (!handleCartError(err)) throw err;
-    }
+    setCart(getLocalCart());
   }
 
   async function add(productId: string, qty = 1) {
-    try {
-      const id = await ensureCart();
-      await api(`/api/cart/${id}/items`, { method: 'POST', body: JSON.stringify({ productId, qty }) });
-      await refresh();
-    } catch (err) {
-      if (handleCartError(err)) {
-        // Retry once if cart was reset
-        const id = await ensureCart();
-        await api(`/api/cart/${id}/items`, { method: 'POST', body: JSON.stringify({ productId, qty }) });
-        await refresh();
-      } else {
-        throw err;
-      }
+    // We need to fetch product details to store them in cart (since we have no backend to hydrate)
+    // In a real app backend does this. For demo we mock it by fetching from our mock API.
+    const product = await api<any>(`/api/products/${productId}`);
+    if (!product) return;
+
+    const current = getLocalCart();
+    const existingIdx = current.items.findIndex(i => i.product.id === productId);
+
+    if (existingIdx >= 0) {
+      current.items[existingIdx].qty += qty;
+    } else {
+      current.items.push({
+        id: `item-${Date.now()}`,
+        qty,
+        product
+      });
     }
+    saveLocalCart(current);
   }
 
   async function updateQty(itemId: string, qty: number) {
-    if (!cartId) return;
-    try {
-      await api(`/api/cart/${cartId}/items/${itemId}`, { method: 'PATCH', body: JSON.stringify({ qty }) });
-      await refresh();
-    } catch (err) {
-      if (!handleCartError(err)) throw err;
+    const current = getLocalCart();
+    const idx = current.items.findIndex(i => i.id === itemId);
+    if (idx >= 0) {
+      if (qty <= 0) {
+        current.items.splice(idx, 1);
+      } else {
+        current.items[idx].qty = qty;
+      }
+      saveLocalCart(current);
     }
   }
 
   async function remove(itemId: string) {
-    if (!cartId) return;
-    try {
-      await api(`/api/cart/${cartId}/items/${itemId}`, { method: 'DELETE' });
-      await refresh();
-    } catch (err) {
-      if (!handleCartError(err)) throw err;
+    const current = getLocalCart();
+    const idx = current.items.findIndex(i => i.id === itemId);
+    if (idx >= 0) {
+      current.items.splice(idx, 1);
+      saveLocalCart(current);
     }
   }
 
-  const value = useMemo(() => ({ cart, refresh, add, updateQty, remove }), [cart, cartId]);
+  const value = useMemo(() => ({ cart, refresh, add, updateQty, remove }), [cart]);
 
   return <CartCtx.Provider value={value as any}>{children}</CartCtx.Provider>;
 }

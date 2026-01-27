@@ -105,8 +105,8 @@ export default function SearchBar() {
 
       {/* Dropdown Suggestions */}
       {isOpen && suggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-fadeIn">
-          <div className="max-h-[400px] overflow-y-auto">
+        <div className="absolute top-[calc(100%+8px)] left-0 right-0 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-gray-100 overflow-hidden z-[9999] animate-fadeIn">
+          <div className="max-h-[400px] overflow-y-auto custom-scrollbar">
             {suggestions.map((product) => (
               <button
                 key={product.id}
@@ -163,6 +163,16 @@ export default function SearchBar() {
         }
         .animate-fadeIn {
           animation: fadeIn 0.2s ease-out;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 3px;
         }
       `}</style>
     </div>
