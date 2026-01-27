@@ -2,8 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const messages: Record<string, () => Promise<any>> = {
-  ar: () => import('../../messages/ar.json').then((m) => m.default),
-  en: () => import('../../messages/en.json').then((m) => m.default),
+  ar: () => import('../messages_data/ar.json').then((m) => m.default),
+  en: () => import('../messages_data/en.json').then((m) => m.default),
 };
 
 export async function getMessages(locale: string) {
