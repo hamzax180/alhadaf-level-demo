@@ -48,7 +48,7 @@ export default function Header() {
           <Topbar />
         </div>
         <Container>
-          <div className={`py-3 flex items-center gap-3 justify-between transition-all duration-300 ${isMenuOpen ? 'opacity-0 pointer-events-none scale-95' : 'opacity-100 scale-100'}`}>
+          <div className={`relative z-[60] py-3 flex items-center gap-3 justify-between transition-all duration-300 ${isMenuOpen ? 'opacity-0 pointer-events-none scale-95' : 'opacity-100 scale-100'}`}>
             <a href={`/${locale}`} className="flex items-center gap-3 font-extrabold">
               <img
                 src="/img/logo.png"
