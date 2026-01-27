@@ -13,8 +13,8 @@ const items = [
     qAr: "هل يمكنني استرجاع المنتج؟", aAr: "نعم خلال 7 أيام بشرط أن يكون المنتج بحالته الأصلية ولم يُفتح."
   },
   {
-    qEn: "Do you have branches?", aEn: "Yes—add your branch cities here.",
-    qAr: "هل لديكم فروع؟", aAr: "نعم—أضف مدن فروعك هنا."
+    qEn: "Do you have branches?", aEn: "Yes, our main branch is located in Riyadh.",
+    qAr: "هل لديكم فروع؟", aAr: "نعم، فرعنا الرئيسي يقع في الرياض."
   }
 ];
 

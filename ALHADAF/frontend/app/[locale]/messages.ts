@@ -3,9 +3,7 @@ import path from 'node:path';
 
 export async function getMessages(locale: string) {
   try {
-    const filePath = path.join(process.cwd(), 'messages', `${locale}.json`);
-    const raw = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(raw);
+    return (await import(`../../messages/${locale}.json`)).default;
   } catch (err) {
     return {
       "nav_home": "Home",
