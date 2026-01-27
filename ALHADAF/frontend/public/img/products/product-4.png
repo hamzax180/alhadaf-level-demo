@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0fdf4"/>
+  <circle cx="200" cy="180" r="100" fill="#22c55e" fill-opacity="0.1"/>
+  <path d="M200 120 L240 280 L160 280 Z" fill="#166534"/>
+  <text x="50%" y="320" font-family="Arial" font-size="24" fill="#166534" text-anchor="middle" font-weight="bold">AGRI-PRODUCT</text>
+</svg>

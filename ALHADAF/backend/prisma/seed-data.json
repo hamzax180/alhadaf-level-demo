@@ -1,0 +1,162 @@
+{
+  "categories": [
+    {
+      "slug": "water-soluble-npk",
+      "nameEn": "Water Soluble NPK Fertilizers",
+      "nameAr": "أسمدة NPK ذائبة",
+      "image": "/img/categories/soluble-npk.jpg"
+    },
+    {
+      "slug": "foliar-fertilizers",
+      "nameEn": "Foliar Fertilizers",
+      "nameAr": "أسمدة ورقية",
+      "image": "/img/categories/foliar.png"
+    },
+    {
+      "slug": "liquids-suspensions",
+      "nameEn": "Liquid & Suspension Fertilizers",
+      "nameAr": "سوائل ومعلقات",
+      "image": "/img/categories/liquids.jpg"
+    },
+    {
+      "slug": "straight-fertilizers",
+      "nameEn": "Straight Fertilizers",
+      "nameAr": "أسمدة أحادية",
+      "image": "/img/categories/straight.jpg"
+    },
+    {
+      "slug": "speciality-fertilizers",
+      "nameEn": "Speciality Fertilizers",
+      "nameAr": "أسمدة متخصصة",
+      "image": "/img/categories/speciality.jpg"
+    },
+    {
+      "slug": "seeds",
+      "nameEn": "Seeds",
+      "nameAr": "بذور",
+      "image": "/img/categories/seeds.jpg"
+    }
+  ],
+  "products": [
+    {
+      "slug": "torofert-20-20-20",
+      "nameEn": "TOROFERT 20-20-20+T.E.",
+      "nameAr": "توروفيرت 20-20-20",
+      "categorySlug": "water-soluble-npk",
+      "price": 180,
+      "descriptionEn": "Highly pure water-soluble NPK fertilizer with trace elements.",
+      "descriptionAr": "سماد NPK ذائب عالي النقاء يحتوي على عناصر نادرة.",
+      "image": "/img/products/torofert.jpg"
+    },
+    {
+      "slug": "green-power-12-12-36",
+      "nameEn": "GREEN POWER 12-12-36+T.E.",
+      "nameAr": "جرين باور 12-12-36",
+      "categorySlug": "water-soluble-npk",
+      "price": 195,
+      "descriptionEn": "Premium quality fertilizer rich in Potassium for fruit development.",
+      "descriptionAr": "سماد عالي الجودة غني بالبوتاسيوم لدعم نمو الثمار.",
+      "image": "/img/products/green-power.jpg"
+    },
+    {
+      "slug": "map-12-61-0",
+      "nameEn": "MAP 12-61-0 (Mono Ammonium Phosphate)",
+      "nameAr": "ماب 12-61-0 (فوسفات أحادي الأمونيوم)",
+      "categorySlug": "straight-fertilizers",
+      "price": 220,
+      "descriptionEn": "Ideal phosphorus source for early growth and root development.",
+      "descriptionAr": "مصدر مثالي للفوسفور للنمو المبكر وتطوير الجذور.",
+      "image": "/img/products/map.jpg"
+    },
+    {
+      "slug": "mkp-0-52-34",
+      "nameEn": "MKP 0-52-34 (Mono Potassium Phosphate)",
+      "nameAr": "إم كيه بي 0-52-34 (فوسفات أحادي البوتاسيوم)",
+      "categorySlug": "straight-fertilizers",
+      "price": 240,
+      "descriptionEn": "Fully water-soluble fertilizer with high Phosphorus and Potassium content.",
+      "descriptionAr": "سماد كامل الذوبان في الماء مع محتوى عالٍ من الفوسفور والبوتاسيوم.",
+      "image": "/img/products/mkp.jpg"
+    },
+    {
+      "slug": "torofert-suspension-20g",
+      "nameEn": "Torofert Suspension 20-20-20",
+      "nameAr": "توروفيرت معلق 20-20-20",
+      "categorySlug": "liquids-suspensions",
+      "price": 200,
+      "descriptionEn": "Highly concentrated suspension fertilizer for efficient fertigation.",
+      "descriptionAr": "سماد معلق عالي التركيز للري والتسميد الفعال.",
+      "image": "/img/products/torofert-susp.jpg"
+    },
+    {
+      "slug": "torophoska-blue",
+      "nameEn": "Torophoska Blue Granular",
+      "nameAr": "توروفوسكا أزرق محبب",
+      "categorySlug": "speciality-fertilizers",
+      "price": 150,
+      "descriptionEn": "Chlorine-free granular fertilizer for high-value crops.",
+      "descriptionAr": "سماد محبب خالي من الكلور للمحاصيل ذات القيمة العالية.",
+      "image": "/img/products/torophoska.jpg"
+    },
+    {
+      "slug": "cucumber-waves-f1",
+      "nameEn": "Cucumber Waves F1 Hybrid Seeds",
+      "nameAr": "بذور خيار ويفز F1 هجين",
+      "categorySlug": "seeds",
+      "price": 85,
+      "descriptionEn": "High-yield hybrid cucumber seeds with high resistance to diseases.",
+      "descriptionAr": "بذور خيار هجين عالية الإنتاجية مع مقاومة عالية للأمراض.",
+      "image": "/img/products/seeds-cucumber.jpg"
+    },
+    {
+      "slug": "tomato-baikonur-f1",
+      "nameEn": "Tomato Baikonur F1 Hybrid Seeds",
+      "nameAr": "بذور طماطم بايكونور F1 هجين",
+      "categorySlug": "seeds",
+      "price": 95,
+      "descriptionEn": "Premium tomato seeds for indoor and outdoor cultivation.",
+      "descriptionAr": "بذور طماطم فاخرة للزراعة الداخلية والخارجية.",
+      "image": "/img/products/seeds-tomato.png"
+    },
+    {
+      "slug": "toro-humic-15",
+      "nameEn": "Toro Humic 15%",
+      "nameAr": "تورو هيوميك 15%",
+      "categorySlug": "liquids-suspensions",
+      "price": 90,
+      "descriptionEn": "Liquid humic acid for soil improvement and nutrient uptake.",
+      "descriptionAr": "حمض هيوميك سائل لتحسين التربة وامتصاص العناصر الغذائية.",
+      "image": "/img/products/humic.jpg"
+    },
+    {
+      "slug": "ferromax-iron",
+      "nameEn": "FerroMax Iron Chelate 6% EDDHA",
+      "nameAr": "فيروماكس حديد مخلب 6%",
+      "categorySlug": "speciality-fertilizers",
+      "price": 130,
+      "descriptionEn": "Highly effective iron source for calcareous soils.",
+      "descriptionAr": "مصدر حديد عالي الفعالية للتربة الكلسية.",
+      "image": "/img/products/ferromax.jpg"
+    },
+    {
+      "slug": "foliar-max-plus",
+      "nameEn": "Foliar Max Plus",
+      "nameAr": "فوليار ماكس بلس",
+      "categorySlug": "foliar-fertilizers",
+      "price": 110,
+      "descriptionEn": "Complete foliar nutrition for rapid absorption.",
+      "descriptionAr": "تغذية ورقية كاملة لامتصاص سريع.",
+      "image": "/img/products/foliar-max.jpg"
+    },
+    {
+      "slug": "leaf-green-booster",
+      "nameEn": "Leaf Green Booster",
+      "nameAr": "محفز الاخضرار الورقي",
+      "categorySlug": "foliar-fertilizers",
+      "price": 85,
+      "descriptionEn": "Enhances chlorophyll production and leaf vitality.",
+      "descriptionAr": "يعزز إنتاج الكلوروفيل وحيوية الأوراق.",
+      "image": "/img/products/leaf-booster.jpg"
+    }
+  ]
+}
