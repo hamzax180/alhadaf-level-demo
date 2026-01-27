@@ -1,4 +1,7 @@
+'use client';
 
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { api } from '../../lib/api';
 
 // CUSTOM EVENT FOR CART UPDATES
 const CART_UPDATED_EVENT = 'cart-updated';
