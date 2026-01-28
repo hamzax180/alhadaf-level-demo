@@ -1,7 +1,7 @@
 'use client';
 
 import Container from './Container';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Footer() {
   const t = useTranslations();
@@ -21,11 +21,11 @@ export default function Footer() {
           <div>
             <div className="text-white/70 text-xs font-bold tracking-widest uppercase">{t('footer_quicklinks')}</div>
             <ul className="mt-3 grid gap-2 text-sm text-white/85">
-              <li><a className="hover:underline" href="#">{t('footer_shipping')}</a></li>
-              <li><a className="hover:underline" href="#">{t('footer_returns')}</a></li>
-              <li><a className="hover:underline" href="#">{t('footer_terms')}</a></li>
-              <li><a className="hover:underline" href="#">{t('footer_track')}</a></li>
-              <li><a className="hover:underline" href="#">{t('footer_wholesale')}</a></li>
+              <li><a className="hover:underline" href={`/${useLocale()}/shipping`}>{t('footer_shipping')}</a></li>
+              <li><a className="hover:underline" href={`/${useLocale()}/returns`}>{t('footer_returns')}</a></li>
+              <li><a className="hover:underline" href={`/${useLocale()}/terms`}>{t('footer_terms')}</a></li>
+              <li><a className="hover:underline" href={`/${useLocale()}/track`}>{t('footer_track')}</a></li>
+              <li><a className="hover:underline" href={`/${useLocale()}/wholesale`}>{t('footer_wholesale')}</a></li>
             </ul>
           </div>
 
