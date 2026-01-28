@@ -53,7 +53,7 @@ export default function Reviews() {
           {t('home_sections_reviews')}
         </div>
         <h2 className="mt-2 text-3xl font-extrabold text-[color:var(--brand-2)]">
-          {locale === 'ar' ? 'ماذا يقول مزارعونا' : 'What Our Farmers Say'}
+          {locale === 'ar' ? 'ماذا يقول عملاؤنا' : 'What Our Customers Say'}
         </h2>
       </div>
 
@@ -62,8 +62,8 @@ export default function Reviews() {
           <div
             key={i}
             className={`absolute inset-x-4 transition-all duration-700 ease-in-out transform ${i === current
-                ? 'opacity-100 translate-y-0 scale-100 z-10'
-                : 'opacity-0 translate-y-8 scale-95 -z-10'
+              ? 'opacity-100 translate-y-0 scale-100 z-10'
+              : 'opacity-0 translate-y-8 scale-95 -z-10'
               }`}
           >
             <div className="rounded-[2.5rem] border border-black/5 bg-white p-8 md:p-10 shadow-2xl shadow-green-100/50 relative overflow-hidden group">
