@@ -90,8 +90,7 @@ export default function CheckoutPage() {
           paymentStatus: payment.status
         })
       });
-      setDone(res.order);
-      await refresh();
+      window.location.href = `/${locale}/checkout/success?orderId=${res.order.id}`;
     } catch (e: any) {
       setErr(String(e?.message || e));
     }
