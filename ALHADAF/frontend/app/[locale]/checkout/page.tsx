@@ -124,8 +124,9 @@ export default function CheckoutPage() {
           paymentStatus: 'paid'
         })
       });
-      setDone(res.order);
-      await refresh();
+      console.log('Order done, redirecting...');
+      // IMPORTANT: Using window.location.href or router.push to force navigation
+      window.location.href = `/${locale}/checkout/success?orderId=${res.order.id}`;
     } catch (e: any) {
       setErr(String(e?.message || e));
     }
