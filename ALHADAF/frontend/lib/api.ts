@@ -56,24 +56,24 @@ const MOCK_PRODUCTS = [
   {
     id: '203', slug: 'pepper-seeds', nameEn: 'Hot Pepper Seeds', nameAr: 'بذور فلفل حار',
     descriptionEn: 'High productivity hot pepper seeds.', descriptionAr: 'بذور فلفل حار عالية الإنتاجية.',
-    priceSar: 40, inStock: true, imageUrl: '/img/products/seeds-1.png', categoryId: '2'
+    priceSar: 40, inStock: true, imageUrl: '/img/products/seeds-tomato.png', categoryId: '2'
   },
   {
     id: '204', slug: 'eggplant-seeds', nameEn: 'Eggplant Seeds', nameAr: 'بذور باذنجان',
     descriptionEn: 'Black beauty variety.', descriptionAr: 'صنف بلاك بيوتي.',
-    priceSar: 35, inStock: false, imageUrl: '/img/products/seeds-2.png', categoryId: '2'
+    priceSar: 35, inStock: false, imageUrl: '/img/products/seeds-cucumber.jpg', categoryId: '2'
   },
 
   // EQUIPMENT (Cat 3)
   {
     id: '103', slug: 'sprayer-5l', nameEn: '5L Garden Sprayer', nameAr: 'رشاشة حدائق 5 لتر',
     descriptionEn: 'Durable plastic pressure sprayer.', descriptionAr: 'رشاشة ضغط بلاستيكية متينة.',
-    priceSar: 80, inStock: true, imageUrl: '/img/products/product-3.png', categoryId: '3'
+    priceSar: 80, inStock: true, imageUrl: '/img/products/humic.jpg', categoryId: '3'
   },
   {
     id: '301', slug: 'pruning-shears', nameEn: 'Pruning Shears', nameAr: 'مقص تقليم',
     descriptionEn: 'Professional gardening shears.', descriptionAr: 'مقص حدائق احترافي.',
-    priceSar: 65, inStock: true, imageUrl: '/img/products/product-4.png', categoryId: '3'
+    priceSar: 65, inStock: true, imageUrl: '/img/products/humic.jpg', categoryId: '3'
   },
   {
     id: '302', slug: 'humic-acid-equipment', nameEn: 'Soil Tester', nameAr: 'جهاز فحص التربة',
@@ -90,7 +90,7 @@ const MOCK_PRODUCTS = [
   {
     id: '402', slug: 'pest-control-universal', nameEn: 'Universal Pest Control', nameAr: 'مكافحة آفات شامل',
     descriptionEn: 'Broad spectrum pesticide.', descriptionAr: 'مبيد واسع الطيف.',
-    priceSar: 75, inStock: true, imageUrl: '/img/products/product-5.png', categoryId: '4'
+    priceSar: 75, inStock: true, imageUrl: '/img/products/foliar-max.jpg', categoryId: '4'
   },
 
   // IRRIGATION (Cat 5)
@@ -102,12 +102,12 @@ const MOCK_PRODUCTS = [
   {
     id: '502', slug: 'drip-tape-100m', nameEn: 'Drip Tape 100m', nameAr: 'شريط تنقيط 100 متر',
     descriptionEn: 'High quality drip irrigation tape.', descriptionAr: 'شريط ري بالتنقيط عالي الجودة.',
-    priceSar: 110, inStock: true, imageUrl: '/img/products/product-1.png', categoryId: '5'
+    priceSar: 110, inStock: true, imageUrl: '/img/products/green-power.jpg', categoryId: '5'
   },
   {
     id: '503', slug: 'sprinkler-head', nameEn: 'Brass Sprinkler Head', nameAr: 'رأش رشاش نحاسي',
     descriptionEn: '360 degree rotating sprinkler.', descriptionAr: 'رشاش دوار 360 درجة.',
-    priceSar: 25, inStock: true, imageUrl: '/img/products/product-2.png', categoryId: '5'
+    priceSar: 25, inStock: true, imageUrl: '/img/products/green-power.jpg', categoryId: '5'
   },
 ];
 
