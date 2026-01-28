@@ -171,6 +171,14 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
           const products = MOCK_PRODUCTS.filter(p => p.categoryId === category.id);
           resolve({ category, products } as any);
         }
+      } else if (path.includes('/checkout')) {
+        // Handle checkout POST demo
+        resolve({
+          order: {
+            id: (Math.floor(Math.random() * 90000) + 10000).toString(),
+            totalSar: 0
+          }
+        } as any);
       } else if (path.startsWith('/api/products/')) {
         // Single product fetch
         const slug = path.split('/').pop();
