@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { useEffect, useState } from 'react';
-import Container from '../../../components/Container';
+import Container from '../../../../components/Container';
 
 export default function CheckoutSuccessPage() {
     const params = useSearchParams();
