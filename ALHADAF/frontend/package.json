@@ -1,7 +1,8 @@
 {
   "name": "orkida-style-frontend",
-  "private": true,
   "version": "1.0.0",
+  "homepage": "https://alhadaf-level-demo.vercel.app",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",

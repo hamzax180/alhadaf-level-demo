@@ -3,6 +3,8 @@
 **Alhadaf Level** is a premium, modern bilingual (Arabic/English) e-commerce platform specifically designed for the professional agricultural sector in Saudi Arabia. Built with cutting-edge web technologies, it offers a seamless shopping experience for fertilizers, seeds, irrigation equipment, and more.
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://alhadaf-level-demo.vercel.app)
+  
+🌐 **Live Website:** [https://alhadaf-level-demo.vercel.app](https://alhadaf-level-demo.vercel.app)
 [![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20|%20Express%20|%20PostgreSQL-blue)](#tech-stack)
 
 ---
