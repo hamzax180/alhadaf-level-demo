@@ -252,8 +252,8 @@ export default function AIChatWidget() {
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={`fixed bottom-6 ${locale === 'ar' ? 'left-6' : 'right-6'} z-[1000] w-16 h-16 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center ${isOpen
-                        ? 'bg-red-500 hover:bg-red-600 rotate-0'
-                        : 'bg-gradient-to-br from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 hover:scale-110'
+                    ? 'bg-red-500 hover:bg-red-600 rotate-0'
+                    : 'bg-gradient-to-br from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 hover:scale-110'
                     }`}
                 aria-label={isOpen ? 'Close chat' : 'Open AI chat'}
             >
@@ -267,8 +267,8 @@ export default function AIChatWidget() {
             {/* Chat Panel */}
             <div
                 className={`fixed bottom-24 ${locale === 'ar' ? 'left-6' : 'right-6'} z-[999] w-[360px] max-w-[calc(100vw-48px)] bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${isOpen
-                        ? 'opacity-100 translate-y-0 visible'
-                        : 'opacity-0 translate-y-8 invisible pointer-events-none'
+                    ? 'opacity-100 translate-y-0 visible'
+                    : 'opacity-0 translate-y-8 invisible pointer-events-none'
                     }`}
                 style={{ maxHeight: 'min(600px, calc(100vh - 160px))' }}
             >
@@ -294,8 +294,8 @@ export default function AIChatWidget() {
                         >
                             <div
                                 className={`max-w-[85%] rounded-2xl px-4 py-3 ${msg.role === 'user'
-                                        ? 'bg-green-600 text-white rounded-br-sm'
-                                        : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm'
+                                    ? 'bg-green-600 text-white rounded-br-sm'
+                                    : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm'
                                     }`}
                             >
                                 <div className="text-sm whitespace-pre-wrap">{msg.content}</div>
