@@ -9,7 +9,10 @@ import AIChatWidget from '../../components/AIChatWidget';
 
 export const metadata = {
   title: 'Alhadaf Level',
-  description: 'Full range of fertilizers and seeds for agriculture'
+  description: 'Full range of fertilizers and seeds for agriculture',
+  icons: {
+    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>'
+  }
 };
 
 export default async function LocaleLayout({
